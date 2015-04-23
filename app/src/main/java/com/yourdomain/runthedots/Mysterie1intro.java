@@ -17,7 +17,7 @@ public class Mysterie1intro extends ActionBarActivity {
 
     }
 
-    /***************************/
+    /********************************/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
