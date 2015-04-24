@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 
 
 public class Riddleselection extends ActionBarActivity {
@@ -14,6 +15,8 @@ public class Riddleselection extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_riddleselection);
+        // Makes sure that the screen does not go idle and into black screen
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 
 
@@ -38,10 +41,17 @@ public class Riddleselection extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    /* Implements the onClick action that takes you from the riddleselection screen to mystery one screen
+
+     */
+
     public void Mysterie1toMission(View view) {
         Intent intent = new Intent (this,Mysterie1intro.class);
         startActivity(intent);
     }
+
+    // Implements the onClick action that takes you from the riddleselection menu, BACK to the main menu
     public void FraMysterietilMenu(View view) {
         Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);

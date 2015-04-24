@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 
 
 public class Mysterie1intro extends ActionBarActivity {
@@ -14,10 +15,10 @@ public class Mysterie1intro extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mysterie1intro);
+        // Makes sure that the screen does not go idle and into black screen
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
     }
-
-    /************************************dfsdfsdfsdf*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -41,13 +42,17 @@ public class Mysterie1intro extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
     /*
-    The code below makes buttons change from one interface to another
+    Implements the onClick action of the button "start", which takes you from the mystery intro,
+    where the mystery is introduced, to the actual gameplay.
      */
     public void FortsættilMysterie1(View view) {
         Intent intent = new Intent (this,Mysterie1.class);
         startActivity(intent);
     }
 
+    /*
+    Implements the onClick action which takes you from the mystery introduction, back to the main menu.
+     */
     public void TilabgetilMysteriemenu(View view) {
         Intent intent = new Intent(this,Riddleselection.class);
         startActivity(intent);
