@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.WindowManager;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -20,6 +21,7 @@ public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mysterie1);
 
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         /*
         Implements the mapFragment which is required to have a map appear on the screen.
         MapFragment is the simplest way to implement a map in an application. The fragment is added
@@ -34,7 +36,6 @@ public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
         // Disables all interaction with the map that is implemented
         mapFragment.getMap().getUiSettings().setAllGesturesEnabled(false);
     }
-
 
     @Override
     public void onMapReady(GoogleMap map) {
