@@ -9,7 +9,7 @@
     <string name="title_activity_riddleselection">Riddleselection</string>
     <string name="Runthedots">Run the Dots</string>
 
-    <!-- defines the strings to display in the "how to play", as they are called in the howtoplay.java class -->
+    <!-- defines the strings to display in the "how to play", as they are called in the howtoplay.java class and run -->
     <string name="HowtoPlaytext1">Hver bane giver dig en gåde/et mysterium som du skal løse.</string>
     <string name="HowtoPlaytext2">Forbind punkterne ved at løbe rundt til dem for at finde svaret.</string>
     <string name="HowtoPlaytext3">For hver bane du gennemfører får du 1, 2 eller 3 stjerner afhængig af din ydeevne.</string>
