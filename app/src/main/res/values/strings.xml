@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">RunTheDots</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="mystery_1_title">Mystery 1</string>
+    <string name="mystery_1_description">\n \n Hvad lever om vinteren, \n \n dør om sommeren \n \n og gror med roden opad?</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_howto_play">HowtoPlay</string>
     <string name="title_activity_mysterie1intro">Mysterie1intro</string>
