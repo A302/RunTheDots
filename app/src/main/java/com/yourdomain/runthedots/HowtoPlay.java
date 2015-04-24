@@ -11,6 +11,7 @@ import android.view.WindowManager;
 
 public class HowtoPlay extends ActionBarActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

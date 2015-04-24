@@ -45,7 +45,7 @@ public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
 
         LatLng sydney = new LatLng(-33.867, 151.206);
 
-        /* Moves the camera to a specific location as is defined by the parameters given.
+        /* Moves the camera to a specific location when the map is loaded as is defined by the parameters given.
         Currently, it takes the coordinate "sydney", as defined above, and gives it a zoom of 13
         13 is an arbitrary number - try changing it to see what happens at different values.
         ~20'ish is the zoom that we implemented in the physical snake game.
