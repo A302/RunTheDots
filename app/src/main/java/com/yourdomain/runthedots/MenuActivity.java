@@ -43,6 +43,7 @@ public class MenuActivity extends ActionBarActivity {
     Implements the onClick action that happens when the button "Hvordan spiller du" is pressed.
     Takes you from the main menu, to the "hvordan spiller du" (How to play) menu.
     It takes the action of executing the code in the HowtoPlay class when it is pressed.
+    *test*
      */
 
     public void HowtoPlayonClick(View view) {
