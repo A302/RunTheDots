@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 
 
 public class HowtoPlay extends ActionBarActivity {
@@ -14,6 +15,8 @@ public class HowtoPlay extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_howto_play);
+        // Makes sure that the screen does not go idle and into black screen
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 
 
@@ -38,6 +41,12 @@ public class HowtoPlay extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    /*
+    Implements the action that happens when you press the "back to menu" button.
+    Takes you  from the how to play menu, back to the main menu
+    and executes the code in the MenuActivity class
+     */
     public void HowtoPlaytilMenuonClick(View view) {
         Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);

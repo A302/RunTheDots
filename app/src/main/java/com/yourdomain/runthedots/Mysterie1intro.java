@@ -41,12 +41,18 @@ public class Mysterie1intro extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
     /*
-    The code below allows the start button in the mysterie intro 1,to bring up the map and start the game.
+    The code below makes buttons change from one interface to another
      */
-
-    public void Startgame1(View view) {
+    public void FortsættilMysterie1(View view) {
         Intent intent = new Intent (this,Mysterie1.class);
         startActivity(intent);
     }
+
+    public void TilabgetilMysteriemenu(View view) {
+        Intent intent = new Intent(this,Riddleselection.class);
+        startActivity(intent);
+    }
+
+
 }
 
