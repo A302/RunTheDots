@@ -43,7 +43,7 @@ public class Mysterie1intro extends ActionBarActivity {
     /*
     The code below makes buttons change from one interface to another
      */
-    public void FortsættilMysterie1(View view) {
+    public void Startgame1(View view) {
         Intent intent = new Intent (this,Mysterie1.class);
         startActivity(intent);
     }
