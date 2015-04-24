@@ -6,6 +6,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
     android:id="@+id/RuntheDots">
 
+    <!-- Implements the headline "Run The Dots", and adds the styling -->
     <TextView android:text="@string/Runthedots" android:layout_width="300dp"
         android:layout_height="70dp"
         android:id="@+id/textView"
@@ -13,6 +14,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
+    <!-- Implements the button "Nyt Spil" in the main menu, and the actions that are associated
+    with this button -->
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -25,6 +28,8 @@
         android:onClick="NytSpilonClick"
         android:textSize="25sp" />
 
+    <!-- Implements the button "Hvordan du spiller" in the main menu, and the actions that are
+    associated with this button, such as what happens when it is clicked. -->
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -37,6 +42,7 @@
         android:onClick="HowtoPlayonClick"
         android:textSize="25sp" />
 
+    <!-- adds the scoring text of how many stars you have, basically the "x3" after the icon -->
     <TextView
         android:layout_width="70dp"
         android:layout_height="50dp"
@@ -49,6 +55,7 @@
         android:text="x3"
         android:textSize="30sp"/>
 
+    <!-- Implements the star icon that is visible in the main menu -->
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,6 +66,7 @@
         android:layout_toLeftOf="@+id/editText2"
         android:layout_toStartOf="@+id/editText2" />
 
+    <!-- Implements the score text "Stjerner i alt" (Totalt amount of stars) in the main menu -->
     <TextView
         android:layout_width="200dp"
         android:layout_height="55dp"

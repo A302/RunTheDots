@@ -38,6 +38,12 @@ public class HowtoPlay extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    /*
+    Implements the action that happens when you press the "back to menu" button.
+    Takes you  from the how to play menu, back to the main menu
+    and executes the code in the MenuActivity class
+     */
     public void HowtoPlaytilMenuonClick(View view) {
         Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);

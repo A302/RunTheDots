@@ -41,13 +41,17 @@ public class Mysterie1intro extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
     /*
-    The code below makes buttons change from one interface to another
+    Implements the onClick action of the button "start", which takes you from the mystery intro,
+    where the mystery is introduced, to the actual gameplay.
      */
     public void FortsættilMysterie1(View view) {
         Intent intent = new Intent (this,Mysterie1.class);
         startActivity(intent);
     }
 
+    /*
+    Implements the onClick action which takes you from the mystery introduction, back to the main menu.
+     */
     public void TilabgetilMysteriemenu(View view) {
         Intent intent = new Intent(this,Riddleselection.class);
         startActivity(intent);

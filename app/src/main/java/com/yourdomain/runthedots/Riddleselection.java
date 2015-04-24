@@ -38,10 +38,17 @@ public class Riddleselection extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    /* Implements the onClick action that takes you from the riddleselection screen to mystery one screen
+
+     */
+
     public void Mysterie1toMission(View view) {
         Intent intent = new Intent (this,Mysterie1intro.class);
         startActivity(intent);
     }
+
+    // Implements the onClick action that takes you from the riddleselection menu, BACK to the main menu
     public void FraMysterietilMenu(View view) {
         Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);

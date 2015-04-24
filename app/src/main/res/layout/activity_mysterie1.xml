@@ -3,6 +3,8 @@
     android:layout_height="match_parent"
     >
 
+    <!-- Implements the MapFragment and defines the layout, which matches the proportions defined
+    in the mysterie1.java class -->
     <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
