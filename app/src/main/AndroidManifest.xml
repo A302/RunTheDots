@@ -14,7 +14,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MenuActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,19 +24,23 @@
         </activity>
         <activity
             android:name=".HowtoPlay"
-            android:label="@string/title_activity_howto_play" >
+            android:label="@string/title_activity_howto_play"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".Mysterie1intro"
-            android:label="@string/title_activity_mysterie1intro" >
+            android:label="@string/title_activity_mysterie1intro"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".Mysterie1"
-            android:label="@string/title_activity_mysterie1" >
+            android:label="@string/title_activity_mysterie1"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".Riddleselection"
-            android:label="@string/title_activity_riddleselection" >
+            android:label="@string/title_activity_riddleselection"
+            android:screenOrientation="portrait">
         </activity>
         <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
         <meta-data
