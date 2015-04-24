@@ -26,11 +26,12 @@
         android:id="@+id/hvordanduspillerButton"
         android:onClick="HowtoPlayonClick"
         android:textSize="25sp"
-        android:background="@mipmap/how"
+        android:background="@mipmap/instructions"
         android:adjustViewBounds="false"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="51dp" />
+        android:layout_marginBottom="51dp"
+        android:layout_gravity="left" />
 
     <ImageView
         android:layout_width="wrap_content"

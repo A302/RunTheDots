@@ -5,7 +5,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.yourdomain.runthedots.HowtoPlayActivity"
-    android:id="@+id/RuntheDots">
+    android:id="@+id/RuntheDots"
+    android:background="@mipmap/background">
 
     <!-- implements the text that is visible in the "Hvordan Spiller du" menu.
     It takes the string as is defined in the strings.xml file and implements it to the menu with
@@ -25,17 +26,6 @@
         android:phoneNumber="true" />
 
     <!-- Implements the headline "Hvordan du spiller" -->
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="65dp"
-        android:text="Hvordan du spiller"
-        android:id="@+id/HowtoPlaytitle"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="39dp"
-        android:textColor="#ff000000"
-        android:textIsSelectable="true"
-        android:textStyle="bold"/>
 
     <!-- adds scrolling options to the menu -->
     <ScrollView
@@ -72,14 +62,14 @@
         android:textSize="25sp"
         android:textColor="#ff000000" />
 
-    <!-- implements the button "Tilbage til menu", and what should happen when it is clicked -->
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="35dp"
-        android:text="Tilbage til menu"
-        android:id="@+id/HowtoPlaytilMenuButton"
-        android:layout_alignParentBottom="true"
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:id="@+id/imageView3"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:onClick="HowtoPlaytilMenuonClick" />
+        android:background="@mipmap/headinstructions" />
+
+    <!-- implements the button "Tilbage til menu", and what should happen when it is clicked -->
 
 </RelativeLayout>
