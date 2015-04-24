@@ -7,6 +7,10 @@
     tools:context="com.yourdomain.runthedots.HowtoPlayActivity"
     android:id="@+id/RuntheDots">
 
+    <!-- implements the text that is visible in the "Hvordan Spiller du" menu.
+    It takes the string as is defined in the strings.xml file and implements it to the menu with
+    layout, style, fontsize etc. -->
+
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="90dp"
@@ -20,6 +24,7 @@
         android:textColor="#ff000000"
         android:phoneNumber="true" />
 
+    <!-- Implements the headline "Hvordan du spiller" -->
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="65dp"
@@ -32,6 +37,7 @@
         android:textIsSelectable="true"
         android:textStyle="bold"/>
 
+    <!-- adds scrolling options to the menu -->
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -66,6 +72,7 @@
         android:textSize="25sp"
         android:textColor="#ff000000" />
 
+    <!-- implements the button "Tilbage til menu", and what should happen when it is clicked -->
     <Button
         android:layout_width="fill_parent"
         android:layout_height="35dp"

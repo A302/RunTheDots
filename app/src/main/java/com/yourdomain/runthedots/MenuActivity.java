@@ -39,11 +39,23 @@ public class MenuActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /*
+    Implements the onClick action that happens when the button "Hvordan spiller du" is pressed.
+    Takes you from the main menu, to the "hvordan spiller du" (How to play) menu.
+    It takes the action of executing the code in the HowtoPlay class when it is pressed.
+    *test*
+     */
+
     public void HowtoPlayonClick(View view) {
         Intent intent = new Intent(this, HowtoPlay.class);
         startActivity(intent);
     }
 
+    /*
+    Implements the onClick action that happens when the button "Nyt Spil" is pressed.
+    Takes you from main menu, to the riddleselections menu.
+    It takes the action of executing the riddleselections class code
+     */
     public void NytSpilonClick(View view) {
         Intent intent = new Intent(this, Riddleselection.class);
         startActivity(intent);
