@@ -9,96 +9,89 @@
     android:background="@mipmap/background">
 
     <!-- Implements the headline text in the riddleselection menu. Adds style, layout, text to appear etc. -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Mysterier"
-        android:id="@+id/MysterieTitle"
-        android:layout_centerHorizontal="true"
-        android:textColor="#ff000000"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        android:textIsSelectable="true" />
 
     <!-- Implements the "Mysterie 1" Button.
     Implements the actions that should happen when it is clicked, which takes you from this button
     which is visible in the riddleselection, on to the mystery one information -->
-    <Button
+    <ImageButton
         android:layout_width="270dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Mysterie 1"
         android:id="@+id/Mysterie1Button"
-        android:layout_below="@+id/MysterieTitle"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="35dp"
         android:textSize="23sp"
-        android:onClick="Mysterie1toMission"/>
+        android:onClick="Mysterie1toMission"
+        android:layout_marginTop="40dp"
+        android:background="@mipmap/mystery1"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignLeft="@+id/Mysterie2Button"
+        android:layout_alignStart="@+id/Mysterie2Button" />
 
     <!-- Implements the "Mysterie 2" Button.
     Implements the actions that should happen when it is clicked, which takes you from this button
     which is visible in the riddleselection, to the screen which informs the user that they cannot
     open this mystery, before they have completed the next mystery. -->
-    <Button
+    <ImageButton
         android:layout_width="270dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Mysterie 2"
         android:id="@+id/Mysterie2Button"
-        android:layout_marginTop="35dp"
         android:textSize="23sp"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/mystery2"
         android:layout_below="@+id/Mysterie1Button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true" />
 
     <!-- See comment for "Mysterie2" -->
-    <Button
+    <ImageButton
         android:layout_width="270dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Mysterie 3"
         android:id="@+id/Mysterie3Button"
+        android:textSize="23sp"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/mystery3"
         android:layout_below="@+id/Mysterie2Button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="35dp"
-        android:textSize="23sp" />
+        android:layout_alignLeft="@+id/Mysterie2Button"
+        android:layout_alignStart="@+id/Mysterie2Button" />
 
     <!-- See comment for "Mystery 2" -->
-    <Button
+    <ImageButton
         android:layout_width="270dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Mysterie 4"
         android:id="@+id/Mysterie4Button"
+        android:textSize="23sp"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/mystery4"
         android:layout_below="@+id/Mysterie3Button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="35dp"
-        android:textSize="23sp" />
+        android:layout_alignLeft="@+id/Mysterie3Button"
+        android:layout_alignStart="@+id/Mysterie3Button" />
 
     <!-- See comment for "Mystery 2" -->
-    <Button
+    <ImageButton
         android:layout_width="270dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Mysterie 5"
         android:id="@+id/Mysterie5Button"
+        android:textSize="23sp"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/mystery5"
         android:layout_below="@+id/Mysterie4Button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="false"
-        android:layout_marginTop="35dp"
-        android:textSize="23sp" />
+        android:layout_alignLeft="@+id/Mysterie4Button"
+        android:layout_alignStart="@+id/Mysterie4Button" />
 
     <!-- Implements the "Back to menu" Button.
     Implements the actions that should happen when it is clicked, which takes you from this button
     which is visible in the riddleselection, BACK to the main menu of the program -->
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="35dp"
-        android:text="Tilbage til menu"
-        android:id="@+id/MysterietilMenuButton"
-        android:onClick="FraMysterietilMenu"
-        android:layout_alignParentBottom="true"
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:id="@+id/imageView2"
+        android:background="@mipmap/mystery"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="48dp" />
 
 </RelativeLayout>

@@ -33,8 +33,9 @@ public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+
         // Disables all interaction with the map that is implemented
-        mapFragment.getMap().getUiSettings().setAllGesturesEnabled(false);
+        mapFragment.getMap().getUiSettings().setAllGesturesEnabled(true);
     }
 
     @Override
@@ -49,7 +50,7 @@ public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
         13 is an arbitrary number - try changing it to see what happens at different values.
         ~20'ish is the zoom that we implemented in the physical snake game.
          */
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 13));
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(57.161400,9.735294), 13));
         map.animateCamera(CameraUpdateFactory.zoomIn());
         map.animateCamera(CameraUpdateFactory.zoomTo(20), 2000, null);
 
