@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 
 
 public class Mysterie1intro extends ActionBarActivity {
@@ -14,10 +15,10 @@ public class Mysterie1intro extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mysterie1intro);
+        // Makes sure that the screen does not go idle and into black screen
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
     }
-
-    /************************************dfsdfsdfsdf*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
