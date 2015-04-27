@@ -56,10 +56,10 @@ public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
         map.animateCamera(CameraUpdateFactory.zoomTo(20), 2000, null);
 
         map.addPolygon(new PolygonOptions()
-                .add(new LatLng(57.161790, 9.734060))
-                .add(new LatLng(57.161090, 9.733900))
-                .add(new LatLng(57.160840, 9.736400))
-                .add(new LatLng(57.161560, 9.736610)));
+                .add(new LatLng(57.161610, 9.734970))
+                .add(new LatLng(57.161120, 9.734830))
+                .add(new LatLng(57.161010, 9.735740))
+                .add(new LatLng(57.161600, 9.735950)));
 
         /*
         Adds a marker at the location of the "sydney" coordinate, gives it a title and a secondary
