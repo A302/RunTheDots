@@ -56,10 +56,10 @@ public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
         map.animateCamera(CameraUpdateFactory.zoomTo(20), 2000, null);
 
         map.addPolygon(new PolygonOptions()
-                .add(new LatLng(57.161610, 9.734970))
-                .add(new LatLng(57.161120, 9.734830))
-                .add(new LatLng(57.161010, 9.735740))
-                .add(new LatLng(57.161600, 9.735950)));
+                .add(new LatLng(57.16160, 9.735000))
+                .add(new LatLng(57.16160, 9.735500))
+                .add(new LatLng(57.16120, 9.735500))
+                .add(new LatLng(57.16120, 9.735000)));
 
         /*
         Adds a marker at the location of the "sydney" coordinate, gives it a title and a secondary
@@ -67,11 +67,11 @@ public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
         The title and snippet are not useful to our program, as it only appears when a marker is
         pressed on the map, which we disable completely, therefore rendering the information given useless
         */
-        map.addMarker(new MarkerOptions()
-                .title("Sydney")
-                .snippet("The most populous city in Australia.")
-                .position(sydney));
-    }
+            map.addMarker(new MarkerOptions()
+    .title("Sydney")
+    .snippet("The most populous city in Australia.")
+    .position(sydney));
+}
 
 
     @Override
