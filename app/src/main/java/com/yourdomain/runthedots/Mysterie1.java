@@ -44,8 +44,6 @@ public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
         // Enables the current location as a blue dot on the map
         map.setMyLocationEnabled(true);
 
-        LatLng sydney = new LatLng(-33.867, 151.206);
-
         /* Moves the camera to a specific location when the map is loaded as is defined by the parameters given.
         Currently, it takes the coordinate "sydney", as defined above, and gives it a zoom of 13
         13 is an arbitrary number - try changing it to see what happens at different values.
@@ -60,17 +58,6 @@ public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
                 .add(new LatLng(57.16160, 9.735500))
                 .add(new LatLng(57.16120, 9.735500))
                 .add(new LatLng(57.16120, 9.735000)));
-
-        /*
-        Adds a marker at the location of the "sydney" coordinate, gives it a title and a secondary
-        information.
-        The title and snippet are not useful to our program, as it only appears when a marker is
-        pressed on the map, which we disable completely, therefore rendering the information given useless
-        */
-            map.addMarker(new MarkerOptions()
-    .title("Sydney")
-    .snippet("The most populous city in Australia.")
-    .position(sydney));
 }
 
 
