@@ -12,6 +12,7 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolygonOptions;
 
 
 public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
@@ -53,6 +54,12 @@ public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(57.161400,9.735294), 13));
         map.animateCamera(CameraUpdateFactory.zoomIn());
         map.animateCamera(CameraUpdateFactory.zoomTo(20), 2000, null);
+
+        map.addPolygon(new PolygonOptions()
+                .add(new LatLng(57.161790, 9.734060))
+                .add(new LatLng(57.161090, 9.733900))
+                .add(new LatLng(57.160840, 9.736400))
+                .add(new LatLng(57.161560, 9.736610)));
 
         /*
         Adds a marker at the location of the "sydney" coordinate, gives it a title and a secondary
