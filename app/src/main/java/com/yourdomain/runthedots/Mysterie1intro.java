@@ -6,18 +6,26 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 
 public class Mysterie1intro extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Set window fullscreen and remove title bar
+        this.supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
+
+        // Set layout of the activity to specified layout resource file
         setContentView(R.layout.activity_mysterie1intro);
 
+        // Ensures that the application is kept awake at all times - app can't go into idle mode
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        // Set window fullscreen and remove title bar
     }
-
-    /************************************dfsdfsdfsdf*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -40,9 +48,8 @@ public class Mysterie1intro extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    /*
-    The code below makes buttons change from one interface to another
-     */
+
+    //The code below makes buttons change from one interface to another
     public void Startgame1(View view) {
         Intent intent = new Intent (this,Mysterie1.class);
         startActivity(intent);
