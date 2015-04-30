@@ -12,55 +12,13 @@
     It takes the string as is defined in the strings.xml file and implements it to the menu with
     layout, style, fontsize etc. -->
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="90dp"
-        android:id="@+id/HowtoPlaytext1"
-        android:layout_marginTop="81dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:text="@string/HowtoPlaytext1"
-        android:textSize="25sp"
-        android:textColor="#ff000000"
-        android:phoneNumber="true" />
-
     <!-- Implements the headline "Hvordan du spiller" -->
 
     <!-- adds scrolling options to the menu -->
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/scrollView"
-        android:layout_alignRight="@+id/HowtoPlaytext1"
-        android:layout_alignEnd="@+id/HowtoPlaytext1"
-        android:layout_below="@+id/HowtoPlaytext1"
-        android:layout_toRightOf="@+id/HowtoPlaytext1"
-        android:layout_toEndOf="@+id/HowtoPlaytext1" />
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="90dp"
-        android:text="@string/HowtoPlaytext2"
-        android:id="@+id/HowtoPlaytext2"
-        android:layout_below="@+id/scrollView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="36dp"
-        android:textColor="#ff000000"
-        android:textSize="25sp" />
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="90dp"
-        android:text="@string/HowtoPlaytext3"
-        android:id="@+id/HowtoPlaytext3"
-        android:layout_below="@+id/HowtoPlaytext2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="33dp"
-        android:textSize="25sp"
-        android:textColor="#ff000000" />
+        android:id="@+id/scrollView" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -69,6 +27,15 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:background="@mipmap/headinstructions" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="450dp"
+        android:id="@+id/imageView7"
+        android:background="@mipmap/howtotext"
+        android:layout_below="@+id/imageView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <!-- implements the button "Tilbage til menu", and what should happen when it is clicked -->
 

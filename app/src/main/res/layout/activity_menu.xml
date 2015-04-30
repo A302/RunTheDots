@@ -17,7 +17,21 @@
         android:background="@mipmap/newgame"
         android:adjustViewBounds="false"
         android:layout_above="@+id/hvordanduspillerButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignLeft="@+id/hvordanduspillerButton"
+        android:layout_alignStart="@+id/hvordanduspillerButton" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="3 x"
+        android:textSize="40dp"
+        android:layout_marginRight="10dp"
+        android:textColor="#FFF200"
+        android:id="@+id/textView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView" />
 
     <ImageButton
         android:layout_width="250dp"
@@ -25,21 +39,40 @@
         android:text="Hvordan du spiller"
         android:id="@+id/hvordanduspillerButton"
         android:onClick="HowtoPlayonClick"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
         android:textSize="25sp"
         android:background="@mipmap/instructions"
         android:adjustViewBounds="false"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="51dp"
-        android:layout_gravity="left" />
+        android:layout_gravity="left"
+        android:layout_above="@+id/imageView5"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
         android:id="@+id/imageView"
         android:background="@mipmap/logo"
         android:layout_above="@+id/nytspilButton"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="51dp" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView5"
+        android:background="@mipmap/not"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView6"
+        android:background="@mipmap/star"
+        android:layout_below="@+id/hvordanduspillerButton"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView" />
 
 </RelativeLayout>
