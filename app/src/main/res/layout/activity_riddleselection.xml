@@ -39,9 +39,10 @@
         android:layout_marginTop="10dp"
         android:background="@mipmap/mystery2"
         android:layout_below="@+id/Mysterie1Button"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="TilMysterieTo"/>
 
-    <!-- See comment for "Mysterie2" -->
+    <!-- See comment for "Mysterie3" -->
     <ImageButton
         android:layout_width="270dp"
         android:layout_height="60dp"
@@ -54,7 +55,7 @@
         android:layout_alignLeft="@+id/Mysterie2Button"
         android:layout_alignStart="@+id/Mysterie2Button" />
 
-    <!-- See comment for "Mystery 2" -->
+    <!-- See comment for "Mystery 4" -->
     <ImageButton
         android:layout_width="270dp"
         android:layout_height="60dp"
@@ -67,7 +68,7 @@
         android:layout_alignLeft="@+id/Mysterie3Button"
         android:layout_alignStart="@+id/Mysterie3Button" />
 
-    <!-- See comment for "Mystery 2" -->
+    <!-- See comment for "Mystery 5" -->
     <ImageButton
         android:layout_width="270dp"
         android:layout_height="60dp"
