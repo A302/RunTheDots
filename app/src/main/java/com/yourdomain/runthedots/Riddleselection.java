@@ -3,6 +3,7 @@ package com.yourdomain.runthedots;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,7 +16,7 @@ import android.widget.TextView;
 
 public class Riddleselection extends ActionBarActivity {
 
-    Context context;
+    Context context = this;
     private ImageButton Imagebutton2;
     private ImageButton Imagebutton3;
     private ImageButton Imagebutton4;
@@ -40,14 +41,14 @@ public class Riddleselection extends ActionBarActivity {
 
                 // set title
 
-                dialog.setTitle("@string/mystery_locked_popup_title");
+                dialog.setTitle(getString(R.string.mystery_locked_popup_title));
 
 
                 // set dialog messages
 
                 TextView text = (TextView) dialog.findViewById(R.id.text);
-                text.setText("@string/mystery_locked_popup");
-                Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
+                text.setText(R.string.mystery_locked_popup);
+                ImageButton dialogButton = (ImageButton) dialog.findViewById(R.id.dialogButtonOK);
                 // if button is clicked, close the custom dialog
                 dialogButton.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -74,14 +75,14 @@ public class Riddleselection extends ActionBarActivity {
 
                 // set title
 
-                dialog.setTitle("@string/mystery_locked_popup_title");
+                dialog.setTitle(getString(R.string.mystery_locked_popup_title));
 
 
                 // set dialog message
 
                 TextView text = (TextView) dialog.findViewById(R.id.text);
-                text.setText("@string/mystery_locked_popup");
-                Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
+                text.setText(R.string.mystery_locked_popup);
+                ImageButton dialogButton = (ImageButton) dialog.findViewById(R.id.dialogButtonOK);
                 // if button is clicked, close the custom dialog
                 dialogButton.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -107,14 +108,14 @@ public class Riddleselection extends ActionBarActivity {
 
                 // set title
 
-                dialog.setTitle("@string/mystery_locked_popup_title");
+                dialog.setTitle(getString(R.string.mystery_locked_popup_title));
 
 
                 // set dialog message
 
                 TextView text = (TextView) dialog.findViewById(R.id.text);
-                text.setText("@string/mystery_locked_popup");
-                Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
+                text.setText(R.string.mystery_locked_popup);
+                ImageButton dialogButton = (ImageButton) dialog.findViewById(R.id.dialogButtonOK);
                 // if button is clicked, close the custom dialog
                 dialogButton.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -140,14 +141,14 @@ public class Riddleselection extends ActionBarActivity {
 
                 // set title
 
-                dialog.setTitle("@string/mystery_locked_popup_title");
+                dialog.setTitle(getString(R.string.mystery_locked_popup_title));
 
 
                 // set dialog message
 
                 TextView text = (TextView) dialog.findViewById(R.id.text);
-                text.setText("@string/mystery_locked_popup");
-                Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
+                text.setText(R.string.mystery_locked_popup);
+                ImageButton dialogButton = (ImageButton) dialog.findViewById(R.id.dialogButtonOK);
                 // if button is clicked, close the custom dialog
                 dialogButton.setOnClickListener(new View.OnClickListener() {
                     @Override

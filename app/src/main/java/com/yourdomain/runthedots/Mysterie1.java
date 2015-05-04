@@ -9,6 +9,8 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.CircleOptions;
+import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.PolygonOptions;
 
@@ -47,7 +49,7 @@ public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
         13 is an arbitrary number - try changing it to see what happens at different values.
         ~20'ish is the zoom that we implemented in the physical snake game.
          */
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(57.161400,9.735294), 13));
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(57.161400, 9.735294), 13));
         map.animateCamera(CameraUpdateFactory.zoomIn());
         map.animateCamera(CameraUpdateFactory.zoomTo(20), 2000, null);
 
@@ -56,6 +58,11 @@ public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
                 .add(new LatLng(57.16160, 9.735500))
                 .add(new LatLng(57.16120, 9.735500))
                 .add(new LatLng(57.16120, 9.735000)));
+
+        map.addCircle(new CircleOptions()
+                .radius(0.1)
+                .fillColor(255)
+                .center(new LatLng (57.16200, 9.73525)));
 }
 
 
