@@ -8,6 +8,7 @@
     <string name="title_activity_mysterie1intro">Mysterie1intro</string>
     <string name="title_activity_mysterie1">Mysterie1</string>
     <string name="title_activity_riddleselection">Riddleselection</string>
+    <string name="start_game">Start</string>
     <string name="Runthedots">Run the Dots</string>
 
     <!-- defines the strings to display in the "how to play", as they are called in the howtoplay.java class and run -->
@@ -18,6 +19,14 @@
     <string name="title_activity_riddle_sellection">RiddleSellectionActivity</string>
     <string name="title_activity_mystery_locked_popup">MysteryLockedPopup</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="mystery_locked_popup">Du skal gennemføre det forrige mysterie for at låse op for dette mysterium!</string>
+    <string name="mystery_locked_popup_title">Dette mysterium er låst!</string>
+
+
+    <!-- strings for the main menu -->
+    <string name="new_game">Nyt Spil</string>
+    <string name="x3_score">3 x</string>
+    <string name="how_to_play">Hvordan du spiller</string>
+
 </resources>
 
