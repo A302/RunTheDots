@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="450dp"
         android:id="@+id/imageView7"
-        android:background="@mipmap/howtotext"
+        android:background="@mipmap/instructions"
         android:layout_below="@+id/imageView3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
