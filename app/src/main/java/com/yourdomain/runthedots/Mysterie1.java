@@ -4,15 +4,12 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.Window;
-import android.view.WindowManager;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolygonOptions;
 
 
@@ -20,16 +17,9 @@ public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // Set window fullscreen and remove title bar
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
-
-        // Set layout of this activity to specified layout resourcefile
         setContentView(R.layout.activity_mysterie1);
-
         // Makes sure that the screen does not go idle and into black screen
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         /*
         Implements the mapFragment which is required to have a map appear on the screen.
@@ -41,6 +31,7 @@ public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
         MapFragment mapFragment = (MapFragment) getFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
 
         // Disables all interaction with the map that is implemented
         mapFragment.getMap().getUiSettings().setAllGesturesEnabled(true);
@@ -60,7 +51,6 @@ public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
         map.animateCamera(CameraUpdateFactory.zoomIn());
         map.animateCamera(CameraUpdateFactory.zoomTo(20), 2000, null);
 
-        //Adds the playing field to the map
         map.addPolygon(new PolygonOptions()
                 .add(new LatLng(57.16160, 9.735000))
                 .add(new LatLng(57.16160, 9.735500))
