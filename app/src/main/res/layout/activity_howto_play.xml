@@ -20,6 +20,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/scrollView" />
 
+    <!-- Adds the title for instructions -->
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="60dp"
@@ -28,15 +29,15 @@
         android:layout_centerHorizontal="true"
         android:background="@mipmap/headinstructions" />
 
+    <!-- adds image of the how to play text -->
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="450dp"
         android:id="@+id/imageView7"
         android:background="@mipmap/howtotext"
         android:layout_below="@+id/imageView3"
+        android:lineSpacingExtra="10dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
-    <!-- implements the button "Tilbage til menu", and what should happen when it is clicked -->
 
 </RelativeLayout>
