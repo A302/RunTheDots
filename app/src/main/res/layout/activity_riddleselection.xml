@@ -39,7 +39,8 @@
         android:layout_marginTop="10dp"
         android:background="@mipmap/mystery2"
         android:layout_below="@+id/Mysterie1Button"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="Mysterie2ButtononClick"/>
 
     <!-- See comment for "Mysterie2" -->
     <ImageButton
