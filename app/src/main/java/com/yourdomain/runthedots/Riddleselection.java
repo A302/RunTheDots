@@ -46,7 +46,7 @@ public class Riddleselection extends ActionBarActivity {
 
 
 
-                // set dialog message
+                // set dialog messages
 
                 TextView text = (TextView) dialog.findViewById(R.id.text);
                 text.setText("Gennemfør Mysterie 1 for at låse op for dette mysterie");
