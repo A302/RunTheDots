@@ -16,5 +16,8 @@
     <string name="HowtoPlaytext3">For hver bane du gennemfører får du 1, 2 eller 3 stjerner afhængig af din ydeevne.</string>
 
     <string name="title_activity_riddle_sellection">RiddleSellectionActivity</string>
+    <string name="title_activity_mystery_locked_popup">MysteryLockedPopup</string>
+
+    <string name="hello_world">Hello world!</string>
 </resources>
 

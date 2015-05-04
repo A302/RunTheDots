@@ -1,9 +1,11 @@
 package com.yourdomain.runthedots;
 
-import android.os.Bundle;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
 
 
@@ -41,4 +43,13 @@ public class HowtoPlay extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /*
+    Implements the action that happens when you press the "back to menu" button.
+    Takes you  from the how to play menu, back to the main menu
+    and executes the code in the MenuActivity class
+     */
+    public void HowtoPlaytilMenuonClick(View view) {
+        Intent intent = new Intent(this, MenuActivity.class);
+        startActivity(intent);
+    }
 }

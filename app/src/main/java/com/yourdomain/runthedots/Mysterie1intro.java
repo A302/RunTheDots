@@ -1,8 +1,8 @@
 package com.yourdomain.runthedots;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,7 +17,7 @@ public class Mysterie1intro extends ActionBarActivity {
 
     }
 
-
+    /************************************dfsdfsdfsdf*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -44,9 +44,15 @@ public class Mysterie1intro extends ActionBarActivity {
     The code below makes buttons change from one interface to another
      */
     public void Startgame1(View view) {
-        Intent intent = new Intent(this,Mysterie1.class);
+        Intent intent = new Intent (this,Mysterie1.class);
         startActivity(intent);
     }
+
+    /*public void TilabgetilMysteriemenu(View view) {
+        Intent intent = new Intent(this,Riddleselection.class);
+        startActivity(intent);
+    }
+*/
 
 }
 
