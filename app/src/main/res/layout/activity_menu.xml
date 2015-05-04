@@ -10,7 +10,7 @@
     <ImageButton
         android:layout_width="250dp"
         android:layout_height="100dp"
-        android:text="Nyt Spil"
+        android:text="@string/new_game"
         android:id="@+id/nytspilButton"
         android:onClick="NytSpilonClick"
         android:textSize="25sp"
@@ -24,9 +24,9 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="3 x"
-        android:textSize="40dp"
-        android:layout_marginRight="10dp"
+        android:text="@string/x3_score"
+        android:textSize="40sp"
+        android:layout_marginRight="10sp"
         android:textColor="#FFF200"
         android:id="@+id/textView"
         android:layout_alignParentBottom="true"
@@ -36,7 +36,7 @@
     <ImageButton
         android:layout_width="250dp"
         android:layout_height="100dp"
-        android:text="Hvordan du spiller"
+        android:text="@string/how_to_play"
         android:id="@+id/hvordanduspillerButton"
         android:onClick="HowtoPlayonClick"
         android:layout_marginTop="20dp"
@@ -44,7 +44,7 @@
         android:textSize="25sp"
         android:background="@mipmap/instructions"
         android:adjustViewBounds="false"
-        android:layout_gravity="left"
+        android:layout_gravity="start"
         android:layout_above="@+id/imageView5"
         android:layout_centerHorizontal="true" />
 
