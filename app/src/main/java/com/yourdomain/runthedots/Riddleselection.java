@@ -16,17 +16,22 @@ import android.widget.TextView;
 
 public class Riddleselection extends ActionBarActivity {
     final Context context = this;
-    private ImageButton Imagebutton;
+    private ImageButton Imagebutton2;
+    private ImageButton Imagebutton3;
+    private ImageButton Imagebutton4;
+    private ImageButton Imagebutton5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_riddleselection);
         // Makes sure that the screen does not go idle and into black screen
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        Imagebutton = (ImageButton) findViewById(R.id.Mysterie2Button);
+        Imagebutton2 = (ImageButton) findViewById(R.id.Mysterie2Button);
+
+
 
         // add button listener
-        Imagebutton.setOnClickListener(new View.OnClickListener() {
+        Imagebutton2.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
@@ -44,7 +49,7 @@ public class Riddleselection extends ActionBarActivity {
                 // set dialog message
 
                 TextView text = (TextView) dialog.findViewById(R.id.text);
-                text.setText("Gennemfør Mysterie 1 for at åbne op for dette mysterie");
+                text.setText("Gennemfør Mysterie 1 for at låse op for dette mysterie");
                 Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
                 // if button is clicked, close the custom dialog
                 dialogButton.setOnClickListener(new View.OnClickListener() {
@@ -57,7 +62,119 @@ public class Riddleselection extends ActionBarActivity {
                 dialog.show();
             }
         });
-        }
+
+        Imagebutton3 = (ImageButton) findViewById(R.id.Mysterie3Button);
+
+
+
+        // add button listener
+        Imagebutton3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+
+                final Dialog dialog = new Dialog(context);
+                dialog.setContentView(R.layout.costumize_dialog);
+
+                // set title
+
+                dialog.setTitle("Dette mysterie er låst!");
+
+
+
+
+                // set dialog message
+
+                TextView text = (TextView) dialog.findViewById(R.id.text);
+                text.setText("Gennemfør Mysterie 2 for at låse op for dette mysterie");
+                Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
+                // if button is clicked, close the custom dialog
+                dialogButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog.show();
+            }
+        });
+        Imagebutton4 = (ImageButton) findViewById(R.id.Mysterie4Button);
+
+
+
+        // add button listener
+        Imagebutton4.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+
+                final Dialog dialog = new Dialog(context);
+                dialog.setContentView(R.layout.costumize_dialog);
+
+                // set title
+
+                dialog.setTitle("Dette mysterie er låst!");
+
+
+
+
+                // set dialog message
+
+                TextView text = (TextView) dialog.findViewById(R.id.text);
+                text.setText("Gennemfør Mysterie 3 for at låse op for dette mysterie");
+                Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
+                // if button is clicked, close the custom dialog
+                dialogButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog.show();
+            }
+        });
+        Imagebutton5 = (ImageButton) findViewById(R.id.Mysterie5Button);
+
+
+
+        // add button listener
+        Imagebutton5.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+
+                final Dialog dialog = new Dialog(context);
+                dialog.setContentView(R.layout.costumize_dialog);
+
+                // set title
+
+                dialog.setTitle("Dette mysterie er låst!");
+
+
+
+
+                // set dialog message
+
+                TextView text = (TextView) dialog.findViewById(R.id.text);
+                text.setText("Gennemfør Mysterie 4 for at låse op for dette mysterie");
+                Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
+                // if button is clicked, close the custom dialog
+                dialogButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog.show();
+            }
+        });
+    }
+
+
+
 
 
 
