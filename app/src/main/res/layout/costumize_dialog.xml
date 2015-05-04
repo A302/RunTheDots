@@ -6,24 +6,22 @@
     <TextView
         android:id="@+id/text"
         android:layout_width="fill_parent"
-        android:layout_height="55dp"
+        android:layout_height="match_parent"
         android:textColor="#ff000000"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:textStyle="bold"
+        android:lineSpacingMultiplier="1.1"
         android:layout_alignParentLeft="false"
-        android:layout_marginBottom="110dp"
         android:layout_alignParentTop="false"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:layout_above="@+id/dialogButtonOK" />
 
-    <Button
+    <ImageButton
         android:id="@+id/dialogButtonOK"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:text=""
         android:visibility="visible"
-        android:background="@mipmap/newgame"
+        android:background="@mipmap/ok"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="49dp" />
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

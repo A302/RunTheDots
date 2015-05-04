@@ -19,14 +19,15 @@
     <string name="title_activity_riddle_sellection">RiddleSellectionActivity</string>
     <string name="title_activity_mystery_locked_popup">MysteryLockedPopup</string>
 
-    <string name="mystery_locked_popup">Du skal gennemføre det forrige mysterie for at låse op for dette mysterium!</string>
+    <!-- Strings for mysteries -->
     <string name="mystery_locked_popup_title">Dette mysterium er låst!</string>
-
+    <string name="mystery_locked_popup">Du skal gennemføre det forrige mysterium, før du kan åbne dette mysterium!</string>
 
     <!-- strings for the main menu -->
     <string name="new_game">Nyt Spil</string>
     <string name="x3_score">Score: 3 x</string>
     <string name="how_to_play">Hvordan du spiller</string>
+
 
 </resources>
 
