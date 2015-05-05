@@ -57,17 +57,8 @@ public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
         mapFragment.getMap().getUiSettings().setAllGesturesEnabled(true);
     }
 
-    /* Constructs a CameraPosition which sets the camera to the position of the schoolyard.
-    Secondly, it changes the rotation of the map in order to center the playing field.
-     */
-    {
-        cameraPosition = new CameraPosition.Builder()
-                .target(new LatLng(57.162238, 9.734942))
-                .zoom(19.5f)
-                .tilt(0)
-                .bearing(9)
-                .build();
-    }
+
+
 
     @Override
     public void onMapReady(GoogleMap map) {
@@ -85,6 +76,19 @@ public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(57.162238, 9.734942), 13));
         map.animateCamera(CameraUpdateFactory.zoomIn());
         map.animateCamera(CameraUpdateFactory.zoomTo(20), 2000, null);
+
+        /* Constructs a CameraPosition which sets the camera to the position of the schoolyard.
+            Secondly, it changes the rotation of the map in order to center the playing field.
+         */
+        {
+            cameraPosition = new CameraPosition.Builder()
+                    .target(new LatLng(57.162238, 9.734942))
+                    .zoom(19.5f)
+                    .tilt(0)
+                    .bearing(9)
+                    .build();
+        }
+
         //Rotates the map 9 degrees by calling the cameraPosition method
         map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
