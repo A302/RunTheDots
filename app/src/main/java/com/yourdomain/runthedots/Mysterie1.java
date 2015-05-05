@@ -36,7 +36,11 @@ public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mysterie1);
         // Makes sure that the screen does not go idle and into black screen
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        //Runs the application in fullscreen
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         /*
         Implements the mapFragment which is required to have a map appear on the screen.
         MapFragment is the simplest way to implement a map in an application. The fragment is added

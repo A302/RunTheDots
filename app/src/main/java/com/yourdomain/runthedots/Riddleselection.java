@@ -26,9 +26,13 @@ public class Riddleselection extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_riddleselection);
         // Makes sure that the screen does not go idle and into black screen
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        Imagebutton2 = (ImageButton) findViewById(R.id.Mysterie2Button);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
+        //Sets the screen to full screen mode
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+
+        Imagebutton2 = (ImageButton) findViewById(R.id.Mysterie2Button);
 
         // add button listener
         Imagebutton2.setOnClickListener(new View.OnClickListener() {

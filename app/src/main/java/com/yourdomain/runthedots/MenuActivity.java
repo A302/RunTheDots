@@ -14,15 +14,15 @@ public class MenuActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // Set window fullscreen and remove title bar
+        // Set window fullscreen
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
 
-        //Sets the layout to specified layout resourcefile
-        setContentView(R.layout.activity_menu);
-
         // Makes sure that the screen does not go idle and into black screen
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        //Sets the layout to specified layout resourcefile
+        setContentView(R.layout.activity_menu);
     }
 
     @Override
@@ -53,7 +53,6 @@ public class MenuActivity extends ActionBarActivity {
     It takes the action of executing the code in the HowtoPlay class when it is pressed.
     *test*
      */
-
     public void HowtoPlayonClick(View view) {
         Intent intent = new Intent(this, HowtoPlay.class);
         startActivity(intent);
