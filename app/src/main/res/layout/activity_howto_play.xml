@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="450dp"
         android:id="@+id/imageView7"
-        android:background="@mipmap/instructions"
+        android:background="@mipmap/howtotext"
         android:layout_below="@+id/imageView3"
         android:lineSpacingExtra="10dp"
         android:layout_alignParentLeft="true"

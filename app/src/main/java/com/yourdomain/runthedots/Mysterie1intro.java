@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 
 
 public class Mysterie1intro extends ActionBarActivity {
@@ -14,6 +15,7 @@ public class Mysterie1intro extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mysterie1intro);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
     }
 
@@ -44,7 +46,7 @@ public class Mysterie1intro extends ActionBarActivity {
     The code below makes buttons change from one interface to another
      */
     public void Startgame1(View view) {
-        Intent intent = new Intent (this,Mysterie1.class);
+        Intent intent = new Intent (this,MapsActivityMysterie1.class);
         startActivity(intent);
     }
 
