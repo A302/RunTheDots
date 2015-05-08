@@ -3,34 +3,35 @@ package com.yourdomain.runthedots;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
+import android.media.Image;
 import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class Riddleselection extends ActionBarActivity {
 
     Context context = this;
-
+    private ImageButton Imagebutton2;
+    private ImageButton Imagebutton3;
+    private ImageButton Imagebutton4;
+    private ImageButton Imagebutton5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_riddleselection);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         // Makes sure that the screen does not go idle and into black screen
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        ImageButton imagebutton2 = (ImageButton) findViewById(R.id.Mysterie2Button);
-        ImageButton imagebutton3 = (ImageButton) findViewById(R.id.Mysterie3Button);
-        ImageButton imagebutton4 = (ImageButton) findViewById(R.id.Mysterie4Button);
-        ImageButton imagebutton5 = (ImageButton) findViewById(R.id.Mysterie5Button);
+        Imagebutton2 = (ImageButton) findViewById(R.id.Mysterie2Button);
 
 
         // add button listener
-        imagebutton2.setOnClickListener(new View.OnClickListener() {
+        Imagebutton2.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
@@ -60,11 +61,11 @@ public class Riddleselection extends ActionBarActivity {
             }
         });
 
-
+        Imagebutton3 = (ImageButton) findViewById(R.id.Mysterie3Button);
 
 
         // add button listener
-        imagebutton3.setOnClickListener(new View.OnClickListener() {
+        Imagebutton3.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
@@ -93,11 +94,11 @@ public class Riddleselection extends ActionBarActivity {
                 dialog.show();
             }
         });
-
+        Imagebutton4 = (ImageButton) findViewById(R.id.Mysterie4Button);
 
 
         // add button listener
-        imagebutton4.setOnClickListener(new View.OnClickListener() {
+        Imagebutton4.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
@@ -126,10 +127,11 @@ public class Riddleselection extends ActionBarActivity {
                 dialog.show();
             }
         });
+        Imagebutton5 = (ImageButton) findViewById(R.id.Mysterie5Button);
 
 
         // add button listener
-        imagebutton5.setOnClickListener(new View.OnClickListener() {
+        Imagebutton5.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
