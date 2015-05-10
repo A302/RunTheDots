@@ -26,7 +26,7 @@
     <ImageButton
         android:layout_width="270dp"
         android:layout_height="60dp"
-        android:text="Mysterie 1"
+        android:text="@string/Mysterie1"
         android:id="@+id/Mysterie1Button"
         android:textSize="23sp"
         android:onClick="Mysterie1toMission"
@@ -43,7 +43,7 @@
     <ImageButton
         android:layout_width="270dp"
         android:layout_height="60dp"
-        android:text="Mysterie 2"
+        android:text="@string/Mysterie2"
         android:id="@+id/Mysterie2Button"
         android:textSize="23sp"
         android:layout_marginTop="10dp"
