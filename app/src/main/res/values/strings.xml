@@ -28,6 +28,10 @@
     <string name="x3_score">Score: 0 x</string>
     <string name="how_to_play">Hvordan du spiller</string>
     <string name="title_activity_maps_activity_mysterie1">Map</string>
+    <string name="title_activity_maps_activity_mysterie2">Map</string>
+    <string name="title_activity_mysterie2intro">Mysterie2intro</string>
+
+    <string name="MysterieComplete">Mysterie gennemført!!!</string>
 
 
 </resources>

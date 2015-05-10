@@ -1,12 +1,15 @@
 package com.yourdomain.runthedots;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.IntentSender;
 import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -22,7 +25,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 
 import java.util.ArrayList;
 
-public class MapsActivityMysterie1 extends FragmentActivity implements
+public class MapsActivityMysterie2 extends FragmentActivity implements
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener {
@@ -39,15 +42,16 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
     Location lastLocation;
     double currentLatitude;
     double currentLongitude;
-    ArrayList<LatLng> coordList = new ArrayList<LatLng>();
+    ArrayList<LatLng> coordList = new ArrayList<>();
     private Button Complete;
     Context context = this;
 
 
 
+
     private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
 
-    public static final String TAG = MapsActivityMysterie1.class.getSimpleName();
+    public static final String TAG = MapsActivityMysterie2.class.getSimpleName();
 
 
     @Override
@@ -68,7 +72,42 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
                 .setInterval(3 * 1000)        // 10 seconds, in milliseconds
                 .setFastestInterval(3 * 1000); // 1 second, in milliseconds
 
+        Complete = (Button) findViewById(R.id.CompleteButton);
+        Complete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
 
+                final Dialog dialog = new Dialog(context);
+                dialog.setContentView(R.layout.mission_complete);
+                dialog.setTitle(getString(R.string.MysterieComplete));
+
+                Button dialogButton = (Button) dialog.findViewById(R.id.MainMenuButton);
+                // if button is clicked, close the custom dialog
+                dialogButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        finish();
+                        Intent intent = new Intent(v.getContext(), MenuActivity.class);
+                        startActivity(intent);
+                    }
+                });
+
+                dialog.show();
+
+                Button dialogButton2 = (Button) dialog.findViewById(R.id.RiddlesellectionButton);
+                // if button is clicked, close the custom dialog
+                dialogButton2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        finish();
+                        Intent intent = new Intent(v.getContext(), Riddleselection.class);
+                        startActivity(intent);
+                    }
+                });
+
+                dialog.show();
+            }
+        });
 
     }
 
@@ -126,6 +165,9 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
     private void setUpMap() {
         //mMap.addMarker(new MarkerOptions(handleNewLocation(currentLatitude);
         mMap.setMyLocationEnabled(true);
+      /* mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(57.161400, 9.735294), 13));
+        mMap.animateCamera(CameraUpdateFactory.zoomIn());
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(20), 2000, null);*/
         cameraPosition = new CameraPosition.Builder()
                 .target(new LatLng(57.162238, 9.734942))
                 .zoom(19.5f)
@@ -154,8 +196,7 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
         Log.d(TAG, location.toString());
         currentLatitude = location.getLatitude();
         currentLongitude = location.getLongitude();
-        coordList.add(new LatLng(currentLatitude,currentLongitude));
-
+        coordList.add(new LatLng(currentLatitude, currentLongitude));
 
 
        /* MarkerOptions options = new MarkerOptions()

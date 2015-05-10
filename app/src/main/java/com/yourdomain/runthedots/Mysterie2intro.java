@@ -8,21 +8,18 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class Mysterie1intro extends ActionBarActivity {
+public class Mysterie2intro extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mysterie1intro);
-
+        setContentView(R.layout.activity_mysterie2intro);
     }
-
-    /************************************dfsdfsdfsdf*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_mysterie1intro, menu);
+        getMenuInflater().inflate(R.menu.menu_mysterie2intro, menu);
         return true;
     }
 
@@ -40,19 +37,9 @@ public class Mysterie1intro extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    /*
-    The code below makes buttons change from one interface to another
-     */
-    public void Startgame1(View view) {
-        Intent intent = new Intent (this,MapsActivityMysterie1.class);
+
+    public void Startgame2(View view) {
+        Intent intent = new Intent(this, MapsActivityMysterie2.class);
         startActivity(intent);
     }
-
-    /*public void TilabgetilMysteriemenu(View view) {
-        Intent intent = new Intent(this,Riddleselection.class);
-        startActivity(intent);
-    }
-*/
-
 }
-
