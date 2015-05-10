@@ -28,7 +28,20 @@
     <string name="x3_score">Score: 0 x</string>
     <string name="how_to_play">Hvordan du spiller</string>
     <string name="title_activity_maps_activity_mysterie1">Map</string>
+    <string name="title_activity_maps_activity_mysterie2">Map</string>
 
+    <string name="MysterieComplete">Mysterie gennemført!</string>
+    <string name="title_activity_mysterie2intro">Mysterie2intro</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="Mysterie2Intro">Jeg har en hat, men ikke noget hoved. Jeg har en fod, men ikke nogen sko. Hvad er jeg?</string>
+    <string name="CompletedMystery1">Svaret: En istap! \n
+        Vil du gå til start menuen eller vil du vælge et nyt mysterie?</string>
+    <string name="CompletedMystery2">Svaret: En Svamp! \n
+        Vil du gå til start menuen eller vil du vælge et nyt mysterie?</string>
+    <string name="ChooseNewMystery">Vælg nyt mysterie</string>
+    <string name="ToMainMenu">Gå til startmenu</string>
+    <string name="MysteryCompleted">Mysterie Gennemført</string>
 
 </resources>
 

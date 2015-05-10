@@ -45,6 +45,7 @@
         android:layout_height="60dp"
         android:text="Mysterie 2"
         android:id="@+id/Mysterie2Button"
+        android:onClick="Mysterie2TilMission"
         android:textSize="23sp"
         android:layout_marginTop="10dp"
         android:background="@mipmap/mystery2"

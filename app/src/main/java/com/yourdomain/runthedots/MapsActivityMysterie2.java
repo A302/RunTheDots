@@ -6,8 +6,8 @@ import android.content.Intent;
 import android.content.IntentSender;
 import android.graphics.Color;
 import android.location.Location;
-import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -31,7 +31,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 
 import java.util.ArrayList;
 
-public class MapsActivityMysterie1 extends FragmentActivity implements
+public class MapsActivityMysterie2 extends FragmentActivity implements
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener {
@@ -40,25 +40,24 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
 
     private GoogleApiClient mGoogleApiClient;
 
-    CameraPosition cameraPosition;
+    private CameraPosition cameraPosition;
     private LocationRequest mLocationRequest;
-
-    private Button Complete;
-    Context context = this;
 
     Location location;
 
     Location lastLocation;
     double currentLatitude;
     double currentLongitude;
-    LatLng latLng;
-    double[] coords = {currentLatitude, currentLongitude};
-    double[] lng = {currentLongitude};
-    ArrayList<LatLng> coordList = new ArrayList<LatLng>();
+    ArrayList<LatLng> coordList = new ArrayList<>();
+    private Button Complete;
+    Context context = this;
+
+
+
 
     private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
 
-    public static final String TAG = MapsActivityMysterie1.class.getSimpleName();
+    public static final String TAG = MapsActivityMysterie2.class.getSimpleName();
 
 
     @Override
@@ -78,16 +77,16 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
         // Create the LocationRequest object
         mLocationRequest = LocationRequest.create()
                 .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
-                .setInterval(3 * 1000)// 10 seconds, in milliseconds
+                .setInterval(3 * 1000)        // 10 seconds, in milliseconds
                 .setFastestInterval(3 * 1000); // 1 second, in milliseconds
 
-        Complete = (Button)findViewById(R.id.buttonComplete);
+        Complete = (Button) findViewById(R.id.buttonComplete);
         Complete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
 
                 final Dialog dialog = new Dialog(context);
-                dialog.setContentView(R.layout.mission_complete);
+                dialog.setContentView(R.layout.mission2_complete);
                 dialog.setTitle(getString(R.string.MysterieComplete));
 
                 Button dialogButton = (Button) dialog.findViewById(R.id.MainMenuButton);
@@ -114,9 +113,9 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
                     }
                 });
 
+                dialog.show();
             }
         });
-
 
     }
 
@@ -125,6 +124,7 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
         super.onResume();
         setUpMapIfNeeded();
         mGoogleApiClient.connect();
+
     }
 
     @Override
@@ -199,18 +199,36 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
         });
 
         mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(57.162095, 9.734893))
+                .position(new LatLng(57.162073, 9.734812))
                 .icon(BitmapDescriptorFactory.fromResource(R.mipmap.dot1)));
 
-
         mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(57.162350, 9.734858))
+                .position(new LatLng(57.162277, 9.734874))
                 .icon(BitmapDescriptorFactory.fromResource(R.mipmap.dot2)));
 
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(57.162307, 9.734749))
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.dot3)));
 
         mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(57.162332, 9.735050))
-                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.dot3)));
+                .position(new LatLng(57.162383, 9.734905))
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.dot4)));
+
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(57.162371, 9.735060))
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.dot5)));
+
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(57.162258, 9.735185))
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.dot6)));
+
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(57.162261, 9.735051))
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.dot7)));
+
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(57.162056, 9.734998))
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.dot8)));
 
         mMap.getUiSettings().setAllGesturesEnabled(false);
         mMap.getUiSettings().setCompassEnabled(false);
@@ -230,15 +248,14 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
         }
         else {
             handleNewLocation(location);
-        }
+        };
     }
 
     private void handleNewLocation(Location location) {
         Log.d(TAG, location.toString());
         currentLatitude = location.getLatitude();
         currentLongitude = location.getLongitude();
-        coordList.add(new LatLng(currentLatitude,currentLongitude));
-        latLng = new LatLng(currentLatitude, currentLongitude);
+        coordList.add(new LatLng(currentLatitude, currentLongitude));
 
     }
 
@@ -271,13 +288,11 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
         polylineOptions.addAll(coordList);
         polylineOptions
                 .width(5)
-                .color(Color.argb(255,62,138,255));
+                .color(Color.RED);
 
 // Adding multiple points in map using polyline and arraylist
         mMap.addPolyline(polylineOptions);
 
         handleNewLocation(location);
     }
-
-
 }

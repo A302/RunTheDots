@@ -11,13 +11,13 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_height="match_parent"
         android:id="@+id/map"
-        tools:context="com.yourdomain.runthedots.MapsActivityMysterie1"
+        tools:context="com.yourdomain.runthedots.MapsActivityMysterie2"
         android:name="com.google.android.gms.maps.SupportMapFragment"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mysterie Gennemført"
+        android:text="@string/MysteryCompleted"
         android:id="@+id/buttonComplete"
         android:textSize="12sp"
         android:layout_alignParentBottom="true"
@@ -25,3 +25,5 @@
 
 
 </RelativeLayout>
+
+
