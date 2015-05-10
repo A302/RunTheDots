@@ -4,42 +4,90 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:id="@+id/RuntheDots"
-    android:background="@mipmap/background">
+    android:id="@+id/RuntheDots" >
 
+    <!-- adds the background and fades it to 50% opacity -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView9"
+        android:background="@mipmap/background"
+        android:alpha="0.5"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <!-- adds the "Nyt spil" button and onclick functionality -->
     <ImageButton
         android:layout_width="250dp"
         android:layout_height="100dp"
-        android:text="Nyt Spil"
+        android:text="@string/new_game"
         android:id="@+id/nytspilButton"
         android:onClick="NytSpilonClick"
         android:textSize="25sp"
         android:background="@mipmap/newgame"
         android:adjustViewBounds="false"
         android:layout_above="@+id/hvordanduspillerButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignLeft="@+id/hvordanduspillerButton"
+        android:layout_alignStart="@+id/hvordanduspillerButton" />
 
+    <!-- adds the score text -->
+    <TextView
+        android:layout_width="225sp"
+        android:layout_height="50sp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/x3_score"
+        android:textSize="40sp"
+        android:layout_marginRight="10sp"
+        android:textColor="#000000"
+        android:id="@+id/textView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView" />
+
+    <!-- adds the "hvordan spiller du button" -->
     <ImageButton
         android:layout_width="250dp"
         android:layout_height="100dp"
-        android:text="Hvordan du spiller"
+        android:text="@string/how_to_play"
         android:id="@+id/hvordanduspillerButton"
         android:onClick="HowtoPlayonClick"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
         android:textSize="25sp"
         android:background="@mipmap/instructions"
         android:adjustViewBounds="false"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="51dp"
-        android:layout_gravity="left" />
+        android:layout_gravity="start"
+        android:layout_above="@+id/imageView5"
+        android:layout_centerHorizontal="true" />
 
+    <!-- adds the title run the dots to the menu -->
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
         android:id="@+id/imageView"
         android:background="@mipmap/logo"
         android:layout_above="@+id/nytspilButton"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="51dp" />
+
+    <!-- adds the music node icon -->
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView5"
+        android:background="@mipmap/not"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true" />
+
+    <!-- adds the star icon for the score -->
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView6"
+        android:background="@android:drawable/star_big_on"
+        android:layout_below="@+id/hvordanduspillerButton"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView" />
 
 </RelativeLayout>

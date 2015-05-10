@@ -4,14 +4,15 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.WindowManager;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.CircleOptions;
+import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolygonOptions;
 
 
 public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
@@ -43,28 +44,26 @@ public class Mysterie1 extends FragmentActivity implements OnMapReadyCallback {
         // Enables the current location as a blue dot on the map
         map.setMyLocationEnabled(true);
 
-        LatLng sydney = new LatLng(-33.867, 151.206);
-
-        /* Moves the camera to a specific location as is defined by the parameters given.
+        /* Moves the camera to a specific location when the map is loaded as is defined by the parameters given.
         Currently, it takes the coordinate "sydney", as defined above, and gives it a zoom of 13
         13 is an arbitrary number - try changing it to see what happens at different values.
         ~20'ish is the zoom that we implemented in the physical snake game.
          */
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(57.161400,9.735294), 13));
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(57.161400, 9.735294), 13));
         map.animateCamera(CameraUpdateFactory.zoomIn());
         map.animateCamera(CameraUpdateFactory.zoomTo(20), 2000, null);
 
-        /*
-        Adds a marker at the location of the "sydney" coordinate, gives it a title and a secondary
-        information.
-        The title and snippet are not useful to our program, as it only appears when a marker is
-        pressed on the map, which we disable completely, therefore rendering the information given useless
-        */
-        map.addMarker(new MarkerOptions()
-                .title("Sydney")
-                .snippet("The most populous city in Australia.")
-                .position(sydney));
-    }
+        map.addPolygon(new PolygonOptions()
+                .add(new LatLng(57.16160, 9.735000))
+                .add(new LatLng(57.16160, 9.735500))
+                .add(new LatLng(57.16120, 9.735500))
+                .add(new LatLng(57.16120, 9.735000)));
+
+        map.addCircle(new CircleOptions()
+                .radius(0.1)
+                .fillColor(255)
+                .center(new LatLng (57.16200, 9.73525)));
+}
 
 
     @Override
