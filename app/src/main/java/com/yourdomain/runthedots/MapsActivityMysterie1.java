@@ -1,12 +1,15 @@
 package com.yourdomain.runthedots;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.IntentSender;
 import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -68,6 +71,43 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
                 .setInterval(3 * 1000)        // 10 seconds, in milliseconds
                 .setFastestInterval(3 * 1000); // 1 second, in milliseconds
 
+
+        Complete = (Button) findViewById(R.id.CompleteButton);
+        Complete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+
+                final Dialog dialog = new Dialog(context);
+                dialog.setContentView(R.layout.mission_complete);
+                dialog.setTitle(getString(R.string.MysterieComplete));
+
+                Button dialogButton = (Button) dialog.findViewById(R.id.MainMenuButton);
+                // if button is clicked, close the custom dialog
+                dialogButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        finish();
+                        Intent intent = new Intent(v.getContext(), MenuActivity.class);
+                        startActivity(intent);
+                    }
+                });
+
+                dialog.show();
+
+                Button dialogButton2 = (Button) dialog.findViewById(R.id.RiddlesellectionButton);
+                // if button is clicked, close the custom dialog
+                dialogButton2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        finish();
+                        Intent intent = new Intent(v.getContext(), Riddleselection.class);
+                        startActivity(intent);
+                    }
+                });
+
+                dialog.show();
+            }
+        });
 
 
     }
