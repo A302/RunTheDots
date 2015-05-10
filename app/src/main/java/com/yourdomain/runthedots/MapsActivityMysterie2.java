@@ -25,7 +25,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 
 import java.util.ArrayList;
 
-public class MapsActivityMysterie1 extends FragmentActivity implements
+public class MapsActivityMysterie2 extends FragmentActivity implements
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener {
@@ -42,15 +42,16 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
     Location lastLocation;
     double currentLatitude;
     double currentLongitude;
-    ArrayList<LatLng> coordList = new ArrayList<LatLng>();
+    ArrayList<LatLng> coordList = new ArrayList<>();
     private Button Complete;
     Context context = this;
 
 
 
+
     private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
 
-    public static final String TAG = MapsActivityMysterie1.class.getSimpleName();
+    public static final String TAG = MapsActivityMysterie2.class.getSimpleName();
 
 
     @Override
@@ -70,7 +71,6 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
                 .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
                 .setInterval(3 * 1000)        // 10 seconds, in milliseconds
                 .setFastestInterval(3 * 1000); // 1 second, in milliseconds
-
 
         Complete = (Button) findViewById(R.id.CompleteButton);
         Complete.setOnClickListener(new View.OnClickListener() {
@@ -108,7 +108,6 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
                 dialog.show();
             }
         });
-
 
     }
 
@@ -166,6 +165,9 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
     private void setUpMap() {
         //mMap.addMarker(new MarkerOptions(handleNewLocation(currentLatitude);
         mMap.setMyLocationEnabled(true);
+      /* mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(57.161400, 9.735294), 13));
+        mMap.animateCamera(CameraUpdateFactory.zoomIn());
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(20), 2000, null);*/
         cameraPosition = new CameraPosition.Builder()
                 .target(new LatLng(57.162238, 9.734942))
                 .zoom(19.5f)
@@ -194,8 +196,7 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
         Log.d(TAG, location.toString());
         currentLatitude = location.getLatitude();
         currentLongitude = location.getLongitude();
-        coordList.add(new LatLng(currentLatitude,currentLongitude));
-
+        coordList.add(new LatLng(currentLatitude, currentLongitude));
 
 
        /* MarkerOptions options = new MarkerOptions()
