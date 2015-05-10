@@ -5,14 +5,23 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.yourdomain.runthedots.HowtoPlayActivity"
-    android:id="@+id/RuntheDots"
-    android:background="@mipmap/background">
+    android:id="@+id/RuntheDots" >
+
 
     <!-- implements the text that is visible in the "Hvordan Spiller du" menu.
     It takes the string as is defined in the strings.xml file and implements it to the menu with
     layout, style, fontsize etc. -->
 
     <!-- Implements the headline "Hvordan du spiller" -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView10"
+        android:layout_centerVertical="true"
+        android:background="@mipmap/background"
+        android:alpha="0.5"
+        android:layout_centerHorizontal="true" />
+
 
     <!-- adds scrolling options to the menu -->
     <ScrollView
@@ -39,5 +48,6 @@
         android:lineSpacingExtra="10dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
 
 </RelativeLayout>

@@ -33,11 +33,6 @@
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".Mysterie1"
-            android:label="@string/title_activity_mysterie1"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity
             android:name=".Riddleselection"
             android:label="@string/title_activity_riddleselection"
             android:screenOrientation="portrait">
@@ -49,8 +44,8 @@
 
 
         <activity android:name="com.yourdomain.runthedots.MapsActivityMysterie1"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_maps_activity_mysterie1">
-
         </activity>
     </application>
 
