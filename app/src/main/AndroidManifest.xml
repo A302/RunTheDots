@@ -33,8 +33,8 @@
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".Mysterie1"
-            android:label="@string/title_activity_mysterie1"
+            android:name="com.yourdomain.runthedots.Mysterie2intro"
+            android:label="@string/title_activity_mysterie2intro"
             android:screenOrientation="portrait">
         </activity>
         <activity
@@ -49,6 +49,10 @@
 
 
         <activity android:name="com.yourdomain.runthedots.MapsActivityMysterie1"
+            android:label="@string/title_activity_maps_activity_mysterie1">
+
+        </activity>
+        <activity android:name="com.yourdomain.runthedots.MapsActivityMysterie2"
             android:label="@string/title_activity_maps_activity_mysterie1">
 
         </activity>

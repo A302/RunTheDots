@@ -91,8 +91,8 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
                         startActivity(intent);
                     }
                 });
-
                 dialog.show();
+
 
                 Button dialogButton2 = (Button) dialog.findViewById(R.id.RiddlesellectionButton);
                 // if button is clicked, close the custom dialog
@@ -104,8 +104,8 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
                         startActivity(intent);
                     }
                 });
-
                 dialog.show();
+
             }
         });
 
