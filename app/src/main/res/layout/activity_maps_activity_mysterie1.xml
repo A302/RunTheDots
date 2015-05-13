@@ -17,7 +17,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mysterie Gennemført"
+        android:text="@string/Mystery_Complete"
         android:id="@+id/buttonComplete"
         android:textSize="12sp"
         android:layout_alignParentBottom="true"

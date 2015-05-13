@@ -16,7 +16,7 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
-    <!-- adds the "Nyt spil" button and onclick functionality -->
+    <!-- adds the "Nyt spil" button and onClick functionality -->
     <ImageButton
         android:layout_width="250dp"
         android:layout_height="100dp"

@@ -78,7 +78,7 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
         // Create the LocationRequest object
         mLocationRequest = LocationRequest.create()
                 .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
-                .setInterval(1000)// 10 seconds, in milliseconds
+                .setInterval(1000)// 1 seconds, in milliseconds
                 .setFastestInterval(1000); // 1 second, in milliseconds
 
         Complete = (Button)findViewById(R.id.buttonComplete);
