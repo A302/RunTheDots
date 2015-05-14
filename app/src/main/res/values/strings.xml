@@ -45,6 +45,7 @@
     <string name="Mysterie2">Mysterie 2</string>
     <string name="Mysterie1">Mysterie 1</string>
     <string name="Mystery_Complete">Mysterie Gennemført</string>
+    <string name="GPS_not_enabled">Din GPS er slået fra, den skal være slået til for at kunne spille spillet. Vil du gå til indstillinger og slå den til?</string>
 
 </resources>
 

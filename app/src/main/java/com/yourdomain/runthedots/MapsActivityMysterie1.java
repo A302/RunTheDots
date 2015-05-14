@@ -52,9 +52,7 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
     double currentLatitude;
     double currentLongitude;
     LatLng latLng;
-    double[] coords = {currentLatitude, currentLongitude};
-    double[] lng = {currentLongitude};
-    ArrayList<LatLng> coordList = new ArrayList<LatLng>();
+    ArrayList<LatLng> coordList = new ArrayList<>();
 
     private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
 
