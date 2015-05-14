@@ -278,6 +278,4 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
 
         handleNewLocation(location);
     }
-
-
 }
