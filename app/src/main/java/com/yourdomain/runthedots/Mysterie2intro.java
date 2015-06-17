@@ -38,11 +38,15 @@ public class Mysterie2intro extends ActionBarActivity {
                             });
             alertDialogBuilder.setNegativeButton("Nej",
                     new DialogInterface.OnClickListener(){
-                        public void onClick(DialogInterface dialog, int id){
+                        public void onClick(DialogInterface dialog, int id) {
                             dialog.cancel();
+
+                            finish();
                         }
                     });
             AlertDialog alert = alertDialogBuilder.create();
+
+
             alert.show();
         }
     }

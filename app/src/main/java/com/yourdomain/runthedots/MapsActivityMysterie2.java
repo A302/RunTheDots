@@ -68,12 +68,12 @@ public class MapsActivityMysterie2 extends FragmentActivity implements
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setUpMapIfNeeded();
 
+
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
                 .addApi(LocationServices.API)
                 .build();
-
         // Create the LocationRequest object
         mLocationRequest = LocationRequest.create()
                 .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
@@ -229,9 +229,9 @@ public class MapsActivityMysterie2 extends FragmentActivity implements
                 .position(new LatLng(57.162056, 9.734998))
                 .icon(BitmapDescriptorFactory.fromResource(R.mipmap.dot8)));
 
-        mMap.getUiSettings().setAllGesturesEnabled(false);
+        /*mMap.getUiSettings().setAllGesturesEnabled(false);
         mMap.getUiSettings().setCompassEnabled(false);
-        mMap.getUiSettings().setMyLocationButtonEnabled(false);
+        mMap.getUiSettings().setMyLocationButtonEnabled(false);*/
 
     }
 

@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 
 
 public class Mysterie1intro extends ActionBarActivity {
@@ -18,7 +19,8 @@ public class Mysterie1intro extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mysterie1intro);
-
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         final LocationManager manager = (LocationManager) getSystemService( Context.LOCATION_SERVICE );
 
         if(!manager.isProviderEnabled( LocationManager.GPS_PROVIDER ))
@@ -38,10 +40,12 @@ public class Mysterie1intro extends ActionBarActivity {
                     new DialogInterface.OnClickListener(){
                         public void onClick(DialogInterface dialog, int id){
                             dialog.cancel();
+                            finish();
                         }
                     });
             AlertDialog alert = alertDialogBuilder.create();
             alert.show();
+
         }
     }
 

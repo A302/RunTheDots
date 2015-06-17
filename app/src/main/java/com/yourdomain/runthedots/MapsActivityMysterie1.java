@@ -210,9 +210,9 @@ public class MapsActivityMysterie1 extends FragmentActivity implements
                 .position(new LatLng(57.162332, 9.735050))
                 .icon(BitmapDescriptorFactory.fromResource(R.mipmap.dot3)));
 
-        mMap.getUiSettings().setAllGesturesEnabled(false);
+       /* mMap.getUiSettings().setAllGesturesEnabled(false);
         mMap.getUiSettings().setCompassEnabled(false);
-        mMap.getUiSettings().setMyLocationButtonEnabled(false);
+        mMap.getUiSettings().setMyLocationButtonEnabled(false);*/
 
     }
 
